@@ -2,9 +2,9 @@
 
 class Database{
 	private $host='localhost';
-    private $db_name='enozom-task';
-    private $user='root';
-    private $password='';
+    private $db_name="id20051359_enozom_task";
+    private $user='id20051359_root';
+    private $password='Rowan_123456';
     private $conn;
 
     public function connect(){

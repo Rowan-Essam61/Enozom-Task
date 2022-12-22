@@ -17,7 +17,7 @@ var xHTTP = new XMLHttpRequest();
             renderPopulation(populations);
             };
         };
-    xHTTP.open("GET", "http://localhost/enozom-task/api/readAll.php", true);
+    xHTTP.open("GET", "https://rowan-enozom-task.000webhostapp.com/api/readAll.php", true);
     xHTTP.send();
 
   //remove the link, buttons and list enteries
