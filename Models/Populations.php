@@ -17,7 +17,19 @@ class Population{
     }
 
     public function read(){
-        $sql="SELECT * FROM $this->table  ";
+        $sql="SELECT 
+        p.id,
+        cty.name as city_name,
+        c.name as country_name, 
+        p.year,
+        p.value,
+        p.sexes,
+        p.reliability	
+        FROM $this->table p 
+        LEFT JOIN countries c 
+        ON p.country_id=c.id
+        LEFT JOIN city cty
+        ON p.city_id=cty.id";
         $stmt=$this->conn->prepare($sql);
         $stmt->execute();
         return $stmt;
